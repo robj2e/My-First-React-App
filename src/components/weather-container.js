@@ -36,7 +36,7 @@ class WeatherContainer extends React.Component {
       this.setState({weatherdata: response.query.results.channel.item})
       console.log(this.state.weatherdata)
     } else {
-      this.setState({error: 'Please enter a valid city'})
+      this.setState({error: 'Request invalid, Please enter a valid city name'})
     }
   }
 
