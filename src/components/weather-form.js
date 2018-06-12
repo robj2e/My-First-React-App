@@ -1,4 +1,5 @@
 import React from 'react'
+import MagGlass from '../images/searchmagnify.png'
 
 // class WeatherForm extends React.Component {
 //   constructor (props) {
@@ -19,8 +20,13 @@ import React from 'react'
 export default (props) => {
   return (
     <div>
-      <input type='text' name='city' value={props.value} onChange={props.handleChange} />
-      <button type='button' onClick={props.handleClick}>Fetch Weather</button>
+      <h1>Enter a UK City</h1>
+      <form onSubmit={props.handleSubmit}>
+        <input type='text' name='city' placeholder='Enter City' value={props.value} onChange={props.handleChange} />
+        <button type='submit'>
+          <img src={MagGlass} alt='' height='13' align='top' />
+        </button>
+      </form>
     </div>
   )
 }

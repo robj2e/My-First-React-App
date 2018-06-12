@@ -8,13 +8,13 @@ import WeatherTableData from './weather-table-data'
 //   }
 // }
 
-export default (props) => {
+export default ({forecast}) => {
   return (
     <table>
       <thead>
         <WeatherTableRow />
       </thead>
-      <WeatherTableData weatherdata={props.weatherdata} />
+      <WeatherTableData forecast={forecast} />
     </table>
   )
 }

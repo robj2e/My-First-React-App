@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default ({ weatherdata }) => {
+export default ({ forecast }) => {
   return (
     <tbody>
-      {weatherdata.forecast.map(forecast => (
-        <tr>
+      {forecast.map((forecast, index) => (
+        <tr key={index}>
           <td>{ forecast.day }</td>
           <td>{ forecast.date }</td>
           <td>{ forecast.high }</td>
