@@ -19,7 +19,8 @@ const cityCapitalised = (cityname) => {
   return cityname.charAt(0).toUpperCase() + cityname.slice(1)
 }
 
-const ForecastsList = ({forecast, searchedCity}) => {
+const ForecastsList = (props) => {
+  const {forecast, searchedCity} = props
   return (
     <div>
       <div>
@@ -27,7 +28,7 @@ const ForecastsList = ({forecast, searchedCity}) => {
       </div>
       <TileContainerStyle>
         {forecast.map((f, index) => (
-          <WeatherTile forecast={f} key={index} />
+          <WeatherTile forecast={f} key={index} index={index} />
         ))}
       </TileContainerStyle>
     </div>
