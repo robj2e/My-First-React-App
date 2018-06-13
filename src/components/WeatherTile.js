@@ -65,6 +65,7 @@ text-align: center;
 padding-bottom: 5px;
 font-weight: bold;
 font-size: 21px;
+font-family: Tahoma;
 `
 
 const TempLo = styled.p`
@@ -74,16 +75,19 @@ top: 4px;
 margin: 0px;
 text-align: center;
 font-size: 16px;
-
+font-family: Tahoma;
 `
 
-const WeatherTile = ({forecast}) => (
-  <StyledWeatherTile>
-    <TileDate>{forecast.date}</TileDate>
-    <TileImage src={whichWeatherPic(forecast)} />
-    <TempHi>{ Math.round((Number(forecast.high) - 32) * 0.5555) }&deg;C</TempHi>
-    <TempLo>{ Math.round((Number(forecast.low) - 32) * 0.5555) }&deg;C</TempLo>
-  </StyledWeatherTile>
-)
+const WeatherTile = (props) => {
+  const {forecast} = props
+  return (
+    <StyledWeatherTile>
+      <TileDate>{forecast.date}</TileDate>
+      <TileImage src={whichWeatherPic(forecast)} />
+      <TempHi>{ Math.round((Number(forecast.high) - 32) * 0.5555) }&deg;C</TempHi>
+      <TempLo>{ Math.round((Number(forecast.low) - 32) * 0.5555) }&deg;C</TempLo>
+    </StyledWeatherTile>
+  )
+}
 
 export default WeatherTile

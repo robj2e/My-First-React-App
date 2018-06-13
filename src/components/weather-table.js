@@ -1,20 +1,21 @@
 import React from 'react'
 import WeatherTableRow from './weather-table-row'
 import WeatherTableData from './weather-table-data'
+import styled from 'styled-components'
 
-// class WeatherTable extends React.Component {
-//   render () {
+const Table = styled.table`
+    margin-top: 30px;
+    text-align: center;
+`
 
-//   }
-// }
-
-export default ({forecast}) => {
+export default (props) => {
+  const {forecast} = props
   return (
-    <table>
+    <Table>
       <thead>
         <WeatherTableRow />
       </thead>
       <WeatherTableData forecast={forecast} />
-    </table>
+    </Table>
   )
 }

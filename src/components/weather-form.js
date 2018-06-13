@@ -1,32 +1,33 @@
 import React from 'react'
 import MagGlass from '../images/searchmagnify.png'
+import styled from 'styled-components'
 
-// class WeatherForm extends React.Component {
-//   constructor (props) {
-//     super(props)
-//     console.log(props)
-//   }
+const TableHeader = styled.h1`
+    text-align:center;
+    font-family: Tahoma;
+`
 
-//   render () {
-//     return (
-//       <div>
-//         <input type='text' name='city' value={this.props.value} onChange={this.props.handleChange} />
-//         <button type='button' onClick={this.props.handleClick}>Fetch Weather</button>
-//       </div>
-//     )
-//   }
-// }
+const TableHeader2 = styled.h2`
+    text-align:center;
+    font-family: Tahoma;
+    `
+
+const StyledForm = styled.div`
+    text-align: center;
+`
 
 export default (props) => {
+  const {handleSubmit, value, handleChange} = props
   return (
-    <div>
-      <h1>Enter a UK City</h1>
-      <form onSubmit={props.handleSubmit}>
-        <input type='text' name='city' placeholder='Enter City' value={props.value} onChange={props.handleChange} />
+    <StyledForm>
+      <TableHeader>Enter a UK City</TableHeader>
+      <TableHeader2>Receive a 10 day forecast</TableHeader2>
+      <form onSubmit={handleSubmit}>
+        <input type='text' name='city' placeholder='Enter City' value={value} onChange={handleChange} />
         <button type='submit'>
           <img src={MagGlass} alt='' height='13' align='top' />
         </button>
       </form>
-    </div>
+    </StyledForm>
   )
 }

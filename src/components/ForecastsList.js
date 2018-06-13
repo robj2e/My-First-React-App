@@ -7,6 +7,7 @@ const TitleStyle = styled.h2`
   color: black;
   text-align: center;
   font-family: Tahoma;
+  margin-top:45px;
 `
 const TileContainerStyle = styled.div`
   display: flex;
@@ -14,18 +15,23 @@ const TileContainerStyle = styled.div`
   height: 160px;
   
 `
+const cityCapitalised = (cityname) => {
+  return cityname.charAt(0).toUpperCase() + cityname.slice(1)
+}
 
-const ForecastsList = ({forecast}) => (
-  <div>
+const ForecastsList = ({forecast, searchedCity}) => {
+  return (
     <div>
-      <TitleStyle>10 Day Forecast</TitleStyle>
+      <div>
+        <TitleStyle>{`${cityCapitalised(searchedCity)}, UK`}</TitleStyle>
+      </div>
+      <TileContainerStyle>
+        {forecast.map((f, index) => (
+          <WeatherTile forecast={f} key={index} />
+        ))}
+      </TileContainerStyle>
     </div>
-    <TileContainerStyle>
-      {forecast.map((f, index) => (
-        <WeatherTile forecast={f} />
-      ))}
-    </TileContainerStyle>
-  </div>
-)
+  )
+}
 
 export default ForecastsList

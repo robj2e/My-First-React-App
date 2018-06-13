@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default ({ forecast }) => {
+export default (props) => {
+  const {forecast} = props
   return (
     <tbody>
       {forecast.map((forecast, index) => (
