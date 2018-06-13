@@ -4,7 +4,7 @@ import WeatherTile from './WeatherTile'
 
 const TitleStyle = styled.h2`
   font-size:25px;
-  color: red;
+  color: black;
   text-align: center;
   font-family: Tahoma;
 `
@@ -12,6 +12,7 @@ const TileContainerStyle = styled.div`
   display: flex;
   flex-direction: row;
   height: 160px;
+  
 `
 
 const ForecastsList = ({forecast}) => (
