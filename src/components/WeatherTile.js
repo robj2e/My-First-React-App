@@ -80,7 +80,6 @@ font-family: Tahoma;
 
 const WeatherTile = (props) => {
   const {forecast, index} = props
-  console.log(props)
   const todayTmozDate = () => {
     if (index === 0) {
       return 'Today'
@@ -93,7 +92,6 @@ const WeatherTile = (props) => {
 
   return (
     <StyledWeatherTile>
-      {/* <TileDate>{forecast.date}</TileDate> */}
       <TileDate>{todayTmozDate()}</TileDate>
       <TileImage src={whichWeatherPic(forecast)} />
       <TempHi>{ Math.round((Number(forecast.high) - 32) * 0.5555) }&deg;C</TempHi>

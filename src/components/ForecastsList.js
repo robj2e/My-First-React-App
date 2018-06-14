@@ -16,7 +16,11 @@ const TileContainerStyle = styled.div`
   
 `
 const cityCapitalised = (cityname) => {
-  return cityname.charAt(0).toUpperCase() + cityname.slice(1)
+  if (cityname.split(' ').length > 1) {
+    return cityname.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(' ')
+  } else {
+    return cityname.charAt(0).toUpperCase() + cityname.slice(1).toLowerCase()
+  }
 }
 
 const ForecastsList = (props) => {
