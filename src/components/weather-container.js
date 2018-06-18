@@ -1,7 +1,6 @@
 import React from 'react'
 import request from 'request-promise'
 import WeatherForm from './weather-form'
-import WeatherTable from './weather-table'
 import ForecastsList from './ForecastsList'
 import styled from 'styled-components'
 
@@ -60,7 +59,6 @@ class WeatherContainer extends React.Component {
         {this.state.forecast ? (
           <div>
             <ForecastsList forecast={this.state.forecast} searchedCity={this.state.searchedCity} />
-            <WeatherTable forecast={this.state.forecast} />
           </div>
         ) : (
           <ErrorMessage>{this.state.error}</ErrorMessage>
