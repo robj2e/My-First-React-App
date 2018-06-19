@@ -3,7 +3,33 @@ import MagGlass from '../images/searchmagnify.png'
 import styled from 'styled-components'
 
 const StyledForm = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
+    width: 100%;
+    form {
+      display: flex;
+    }
+`
+
+const InputField = styled.input`
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  text-align: center;
+  border:none;
+  border-bottom:1px solid #757575;
+  
+`
+
+const SearchButton = styled.button`
+  border-color: white;
+  border-width: 0;
+  height: 55px;
+  width: 55px;
+  border-bottom:1px solid #757575;
 `
 
 export default (props) => {
@@ -11,10 +37,10 @@ export default (props) => {
   return (
     <StyledForm>
       <form onSubmit={handleSubmit}>
-        <input type='text' aria-label='Search Box' name='city' placeholder='Enter City' autoComplete='off' value={value} onChange={handleChange} />
-        <button type='submit' aria-label='Search Button'>
+        <InputField type='text' aria-label='Search Box' name='city' placeholder='Enter City' autoComplete='off' value={value} onChange={handleChange} />
+        <SearchButton type='submit' aria-label='Search Button'>
           <img src={MagGlass} alt='' height='13' align='top' />
-        </button>
+        </SearchButton>
       </form>
     </StyledForm>
   )

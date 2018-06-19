@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import WeatherTile from './WeatherTile'
 
 const TitleStyle = styled.h2`
-  font-size:25px;
+  font-size: 25px;
   color: black;
   text-align: center;
   font-family: Tahoma;
@@ -11,8 +11,9 @@ const TitleStyle = styled.h2`
 `
 const TileContainerStyle = styled.div`
   display: flex;
-  flex-direction: row;
-  height: 160px;
+  height: 500px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   
 `
 const cityCapitalised = (cityname) => {

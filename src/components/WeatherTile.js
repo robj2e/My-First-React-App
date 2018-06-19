@@ -29,16 +29,12 @@ function whichWeatherPic (forecast) {
 
 const StyledWeatherTile = styled.div`
 position: relative;
-    background:lightgrey;
-    height: 150px;
-    border-style: solid;
-    border-width: 2px;
-    width: 200px;
+    height: 190px;
+    width: 240px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-content: flex-start;
-    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 `
 const TileDate = styled.div`
     position: relative;
@@ -51,7 +47,7 @@ const TileDate = styled.div`
 const TileImage = styled.img`
     position: relative;
     top: 6px;
-    height 50px;
+    height: 50px;
     object-fit: contain;
     margin-bottom: 8px;
 `
