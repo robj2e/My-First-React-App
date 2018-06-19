@@ -23,8 +23,8 @@ export default (props) => {
       <TableHeader>Enter a UK City</TableHeader>
       <TableHeader2>Receive a 10 day forecast</TableHeader2>
       <form onSubmit={handleSubmit}>
-        <input type='text' name='city' placeholder='Enter City' autoComplete='off' value={value} onChange={handleChange} />
-        <button type='submit'>
+        <input type='text' aria-label='Search Box' name='city' placeholder='Enter City' autoComplete='off' value={value} onChange={handleChange} />
+        <button type='submit' aria-label='Search Button'>
           <img src={MagGlass} alt='' height='13' align='top' />
         </button>
       </form>
