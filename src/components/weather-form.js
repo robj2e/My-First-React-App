@@ -17,7 +17,7 @@ const InputField = styled.input`
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:300px;
+  width:320px;
   text-align: center;
   border:none;
   border-bottom:1px solid #757575;
@@ -28,7 +28,7 @@ const SearchButton = styled.button`
   border-color: white;
   border-width: 0;
   height: 55px;
-  width: 55px;
+  width: 28px;
   border-bottom:1px solid #757575;
 `
 
