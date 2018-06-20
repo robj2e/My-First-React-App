@@ -12,9 +12,11 @@ const TitleStyle = styled.h2`
 `
 const TileContainerStyle = styled.div`
   display: flex;
+  flex-grow: 1;
   height: 500px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-basis: auto;
   
 `
 const cityCapitalised = (cityname) => {

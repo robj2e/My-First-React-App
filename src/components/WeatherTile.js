@@ -28,14 +28,17 @@ function whichWeatherPic (forecast) {
 }
 
 const StyledWeatherTile = styled.div`
-position: relative;
+    display: flex;
+    position: relative;
     height: 190px;
     width: 240px;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     box-shadow: 0 10px 20px rgba(0,0,255,0.19), 0 6px 6px rgba(0,255,255,0.23);
     border: 1px solid rgb(0,255,255);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
 `
 const TileDate = styled.div`
     position: relative;
