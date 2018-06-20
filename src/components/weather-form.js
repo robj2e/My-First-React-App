@@ -27,6 +27,9 @@ const InputField = styled.input`
   ::placeholder {
     color: white;
   }
+  @media (max-width: 767px) {
+    width:230px;
+  }
 `
 
 const SearchButton = styled.button`
@@ -34,7 +37,7 @@ const SearchButton = styled.button`
   border-width: 0;
   height: 55px;
   width: 28px;
-  border-bottom:1px solid #757575;
+  border-bottom:2px solid #757575;
   background: transparent;
   filter:invert(100%);
   
