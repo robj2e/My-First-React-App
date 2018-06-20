@@ -15,6 +15,7 @@ const StyledForm = styled.div`
 
 const InputField = styled.input`
   font-size:18px;
+  font-family: 'Inconsolata', monospace;
   padding:10px 10px 10px 5px;
   display:block;
   width:320px;

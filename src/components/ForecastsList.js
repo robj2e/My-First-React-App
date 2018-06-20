@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import WeatherTile from './WeatherTile'
 
 const TitleStyle = styled.h2`
-  font-size: 25px;
+  font-size: 28px;
   color: black;
   text-align: center;
-  font-family: Tahoma;
+  font-family: 'Inconsolata', monospace;
   margin-top:45px;
   color: white;
 `

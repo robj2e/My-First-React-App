@@ -39,10 +39,11 @@ position: relative;
 `
 const TileDate = styled.div`
     position: relative;
-    top: -3px;
-    font-family: 'Muli', sans-serif;
+    top: -7px;
+    font-family: 'Inconsolata', monospace;
     text-align: center;
     font-weight: bold;
+    font-size: 21px;
     color: white;
 `
 
@@ -62,19 +63,19 @@ top: 5px;
 text-align: center;
 padding-bottom: 5px;
 font-weight: bold;
-font-size: 21px;
-font-family: Tahoma;
+font-size: 23px;
+font-family: 'Inconsolata', monospace;
 color: white;
 `
 
 const TempLo = styled.p`
 
 position: relative;
-top: 4px;
+top: 10px;
 margin: 0px;
 text-align: center;
-font-size: 16px;
-font-family: Tahoma;
+font-size: 19px;
+font-family: 'Inconsolata', monospace;
 color: white;
 `
 

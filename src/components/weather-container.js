@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const ErrorMessage = styled.p`
   text-align: center;
-  font-family: Tahoma;
+  font-family: 'Inconsolata', monospace;
   font-weight: bold;
 `
 class WeatherContainer extends React.Component {
