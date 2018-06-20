@@ -43,7 +43,7 @@ const TileDate = styled.div`
     font-family: 'Muli', sans-serif;
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: white;
 `
 
 const TileImage = styled.img`
@@ -64,7 +64,7 @@ padding-bottom: 5px;
 font-weight: bold;
 font-size: 21px;
 font-family: Tahoma;
-color: black;
+color: white;
 `
 
 const TempLo = styled.p`
@@ -75,7 +75,7 @@ margin: 0px;
 text-align: center;
 font-size: 16px;
 font-family: Tahoma;
-color: black;
+color: white;
 `
 
 const WeatherTile = (props) => {

@@ -21,7 +21,11 @@ const InputField = styled.input`
   text-align: center;
   border:none;
   border-bottom:1px solid #757575;
-  color:black;
+  color:white;
+  background: transparent;
+  ::placeholder {
+    color: white;
+  }
 `
 
 const SearchButton = styled.button`
@@ -30,6 +34,8 @@ const SearchButton = styled.button`
   height: 55px;
   width: 28px;
   border-bottom:1px solid #757575;
+  background: transparent;
+  filter:invert(100%);
   
   :hover {
     cursor:pointer
