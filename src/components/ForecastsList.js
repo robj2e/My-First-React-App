@@ -8,6 +8,7 @@ const TitleStyle = styled.h2`
   text-align: center;
   font-family: Tahoma;
   margin-top:45px;
+  color: white;
 `
 const TileContainerStyle = styled.div`
   display: flex;

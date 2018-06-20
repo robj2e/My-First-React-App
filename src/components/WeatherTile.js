@@ -34,7 +34,8 @@ position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0,255,255,0.19), 0 6px 6px rgba(0,255,255,0.23);
+    border: 1px solid rgb(0,255,255);
 `
 const TileDate = styled.div`
     position: relative;
@@ -42,6 +43,7 @@ const TileDate = styled.div`
     font-family: 'Muli', sans-serif;
     text-align: center;
     font-weight: bold;
+    color: white;
 `
 
 const TileImage = styled.img`
@@ -62,6 +64,7 @@ padding-bottom: 5px;
 font-weight: bold;
 font-size: 21px;
 font-family: Tahoma;
+color: white;
 `
 
 const TempLo = styled.p`
@@ -72,6 +75,7 @@ margin: 0px;
 text-align: center;
 font-size: 16px;
 font-family: Tahoma;
+color: white;
 `
 
 const WeatherTile = (props) => {
