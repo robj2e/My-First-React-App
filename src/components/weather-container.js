@@ -45,7 +45,7 @@ class WeatherContainer extends React.Component {
       })
 
       response.query.count > 0 ? this.setState({forecast: response.query.results.channel.item.forecast})
-        : this.setState({error: 'Request invalid, Please enter a valid city name'})
+        : this.setState({error: 'Request invalid, Please enter a valid destination'})
     }).catch(err => {
       this.setState({pending: false, error: err})
       console.log(err)

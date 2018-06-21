@@ -30,6 +30,9 @@ const InputField = styled.input`
   @media (max-width: 767px) {
     width:230px;
   }
+  :focus::placeholder {
+    color: transparent;
+  }
 `
 
 const SearchButton = styled.button`
@@ -46,7 +49,7 @@ const SearchButton = styled.button`
   }
 `
 
-export default (props) => {
+const WeatherForm = (props) => {
   const {handleSubmit, value, handleChange} = props
   return (
     <StyledForm>
@@ -59,3 +62,5 @@ export default (props) => {
     </StyledForm>
   )
 }
+
+export default WeatherForm
