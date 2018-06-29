@@ -1,6 +1,8 @@
 import React from 'react'
 import MagGlass from '../images/searchmagnify.png'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { setFormValues, submitForm } from '../actions'
 
 const StyledForm = styled.div`
     display: flex;
@@ -50,11 +52,14 @@ const SearchButton = styled.button`
 `
 
 const WeatherForm = (props) => {
-  const {handleSubmit, value, handleChange} = props
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    props.submitForm()
+  }
   return (
     <StyledForm>
       <form onSubmit={handleSubmit}>
-        <InputField type='text' aria-label='Search Box' name='city' placeholder='Enter City' autoComplete='off' value={value} onChange={handleChange} />
+        <InputField type='text' aria-label='Search Box' name='city' placeholder='Enter City' autoComplete='off' value={props.form.city} onChange={props.setFormValues} />
         <SearchButton type='submit' aria-label='Search Button'>
           <img src={MagGlass} alt='' height='13' align='top' />
         </SearchButton>
@@ -63,4 +68,14 @@ const WeatherForm = (props) => {
   )
 }
 
-export default WeatherForm
+const mapStateToProps = (store) => (
+  {
+    form: store.form
+  }
+)
+
+const mapDispatchToProps = {
+  setFormValues,
+  submitForm
+}
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherForm)

@@ -12,6 +12,7 @@ const ErrorMessage = styled.p`
 class WeatherContainer extends React.Component {
   constructor (props) {
     super(props)
+
     this.state = {
       pending: false,
       city: '',
@@ -19,6 +20,7 @@ class WeatherContainer extends React.Component {
       forecast: null,
       error: false
     }
+
     this.handleChange = this.handleChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
