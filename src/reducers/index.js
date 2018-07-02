@@ -4,8 +4,8 @@ import weather from './weather'
 import form from './form'
 
 const allReducers = combineReducers({
-  weather,
-  form
+  weather: weather,
+  form: form
 })
 
 export default allReducers

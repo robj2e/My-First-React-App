@@ -2,7 +2,7 @@ import React from 'react'
 import MagGlass from '../images/searchmagnify.png'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
-import { setFormValues, submitForm } from '../actions'
+import { setFormValues, submitForm, resetFormValues } from '../actions'
 
 const StyledForm = styled.div`
     display: flex;
@@ -63,6 +63,7 @@ const WeatherForm = (props) => {
         <SearchButton type='submit' aria-label='Search Button'>
           <img src={MagGlass} alt='' height='13' align='top' />
         </SearchButton>
+        <button type='button' aria-label='Reset form' onClick={props.resetFormValues} />
       </form>
     </StyledForm>
   )
@@ -76,6 +77,7 @@ const mapStateToProps = (store) => (
 
 const mapDispatchToProps = {
   setFormValues,
-  submitForm
+  submitForm,
+  resetFormValues
 }
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherForm)

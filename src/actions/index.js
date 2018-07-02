@@ -1,10 +1,17 @@
 import request from 'request-promise'
 
 export const SET_FORM_VALUES = 'SET_FORM_VALUES'
+export const RESET_FORM_VALUES = 'RESET_FORM_VALUES'
 export const setFormValues = (event) => {
   return {
     type: SET_FORM_VALUES,
     payload: event.target.value
+  }
+}
+
+export const resetFormValues = (event) => {
+  return {
+    type: RESET_FORM_VALUES
   }
 }
 
