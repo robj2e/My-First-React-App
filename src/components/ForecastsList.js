@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import WeatherTile from './WeatherTile'
+import { connect } from 'react-redux'
 
 const TitleStyle = styled.h2`
   font-size: 28px;
@@ -28,7 +29,8 @@ const cityCapitalised = (cityname) => {
 }
 
 const ForecastsList = (props) => {
-  const {forecast, searchedCity} = props
+  const {forecast} = props.weather
+  const {searchedCity} = props
   return (
     <div>
       <div>
@@ -43,4 +45,10 @@ const ForecastsList = (props) => {
   )
 }
 
-export default ForecastsList
+const mapStateToProps = (store) => (
+  {
+    weather: store.weather,
+    searchedCity: store.form.searchedCity
+  }
+)
+export default connect(mapStateToProps)(ForecastsList)

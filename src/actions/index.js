@@ -25,9 +25,22 @@ export const submitForm = () => (dispatch, getState) => dispatch({
         uri: `https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22${city}%2C%20uk%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys`,
         json: true
       })
-      return resolve(response.query.results.channel.item.forecast)
+      dispatch(setSearchedCity(city))
+      if (response.query.count > 0) {
+        return resolve(response.query.results.channel.item.forecast)
+      } else {
+        throw new Error('Invalid Request, please enter a valid destination')
+      }
     } catch (e) {
-      console.log(e)
+      return reject(e.message)
     }
   })
 })
+
+export const SET_SEARCHED_CITY = 'SET_SEARCHED_CITY'
+export const setSearchedCity = (city) => {
+  return {
+    type: SET_SEARCHED_CITY,
+    payload: city
+  }
+}

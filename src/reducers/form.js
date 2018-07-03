@@ -1,4 +1,4 @@
-import {SET_FORM_VALUES, RESET_FORM_VALUES} from '../actions'
+import {SET_FORM_VALUES, RESET_FORM_VALUES, SET_SEARCHED_CITY} from '../actions'
 export default (form = {}, action) => {
   switch (action.type) {
     case SET_FORM_VALUES:
@@ -11,6 +11,11 @@ export default (form = {}, action) => {
       return {
         ...form,
         city: ''
+      }
+    case SET_SEARCHED_CITY:
+      return {
+        ...form,
+        searchedCity: action.payload
       }
     default:
       return form
